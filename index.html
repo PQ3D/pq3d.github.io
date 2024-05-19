@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="3D-VisTA">
+  <meta name="keywords" content="3D-VisTA">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>3D-VisTA</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-2 publication-title">3D-VisTA: Pre-trained Transformer for 3D Vision and Text Alignment</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://zhuziyu-edward.github.io">Ziyu Zhu</a><sup>1</sup> &nbsp;&nbsp;&nbsp;
+              <a href="https://jeasinema.github.io">Xiaojian Ma</a><sup>2</sup> &nbsp;&nbsp;&nbsp;
+              <a href="https://yixchen.github.io">Yixin Chen</a><sup>2</sup> &nbsp;&nbsp;&nbsp;
+              <a href="https://www.cs.tsinghua.edu.cn/csen/info/1165/4052.htm">Zhidong Deng</a><sup>1&#x1f4e7</sup> &nbsp;&nbsp;&nbsp;
+              <a href="https://siyuanhuang.com/">Siyuan Huang</a><sup>2&#x1f4e7;</sup> &nbsp;&nbsp;&nbsp;
+              <a href="https://liqing-ustc.github.io/">Qing Li</a><sup>2&#x1f4e7;</sup> &nbsp;&nbsp;&nbsp;
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <!-- <span class="author-block">✉️ corresponding author</span> <br> -->
+            <span class="author-block"><sup>1</sup>Tsinghua University</span> &nbsp;&nbsp;&nbsp;
+            <span class="author-block"><sup>2</sup>Beijing Institute for General Artificial Intelligence (BIGAI)</span> &nbsp;&nbsp;&nbsp;<br>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <!-- <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span> -->
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2308.04352"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <!-- <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span> -->
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/3d-vista/3D-VisTA"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+              <span class="link-block">
+                <a href="https://huggingface.co/datasets/edward2021/ScanScribe"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-database"></i>
+                  </span>
+                  <span>Dataset</span>
+                </a>
+                  </a>
+            </div>
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <h2 class="subtitle has-text-justified">
+        <b>TL;DR:</b> We propose 3D-VisTA, a pre-trained Transformer for 3D Vision and Text Alignment that can be easily adapted to various downstream tasks.
+      </h2>
+      <iframe width="900" height="510"
+         src="https://www.youtube.com/embed/uUtMaoif8DQ">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+<section class="section" >
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            3D vision-language grounding (3D-VL) is an emerging field that aims to connect the 3D physical world with natural language, which is crucial for achieving embodied intelligence. Current 3D-VL models rely heavily on sophisticated modules, auxiliary losses, and optimization tricks, which calls for a simple and unified model. 
+In this paper, we propose 3D-VisTA, a pre-trained Transformer for 3D Vision and Text Alignment that can be easily adapted to various downstream tasks. 3D-VisTA simply utilizes self-attention layers for both single-modal modeling and multi-modal fusion without any sophisticated task-specific design. 
+
+          </p>
+          <p>
+            To further enhance its performance on 3D-VL tasks, we construct ScanScribe, the first large-scale 3D scene-text pairs dataset for 3D-VL pre-training. ScanScribe contains 2,995 RGB-D scans for 1,185 unique indoor scenes originating from ScanNet and 3R-Scan datasets, along with paired 278K scene descriptions generated from existing 3D-VL tasks, templates, and GPT-3.
+            3D-VisTA is pre-trained on ScanScribe via masked language/object modeling and scene-text matching. It achieves state-of-the-art results on various 3D-VL tasks, ranging from visual grounding and question answering to situated reasoning. Moreover, 3D-VisTA demonstrates superior data efficiency, obtaining strong performance even with limited annotations during downstream task fine-tuning.
+          </p>
+        </div>
+        <img id="painting_icon" width="70%" src="file/overall.png">
+      </div>
+    </div>
+</section>
+
+<section class="section" style="background-color:#efeff081">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-six-fifths">
+        <h2 class="title is-3">Contribution</h2>
+        <div class="content has-text-justified">
+          <p>
+            Our main contributions are
+            </p><ol type="1">
+              <li><b>3D-VisTA model</b>. <span style="font-size: 95%;">We propose 3D-VisTA, a simple and unified Transformer for aligning 3D vision and text. The proposed Transformer simply utilizes the self-attention mechanism, without any
+                complex task-specific design. </span></li>
+              <li><b>ScanScribe dataset</b>. <span style="font-size: 95%;">We construct ScanScribe, a large-scale 3D-VL pre-training
+                dataset that contains 278K 3D scene-text pairs for 2,995
+                RGB-D scans of 1,185 unique indoor scenes..</span></li>
+              <li><b>3D self-superised pre-training</b>. <span style="font-size: 95%;">We introduce a self-supervised pre-training scheme for 3D- VL, with masked language/object modeling and scene-text
+                matching. It effectively learns the 3D point cloud and text
+                alignment and further simplifies and improves downstream task fine-tuning.</span></li>
+              <li><b>Performance</b>. <span style="font-size: 95%;">We fine-tune 3D-VisTA and achieve state-of-the-art per-
+                formances on various 3D-VL tasks, ranging from visual grounding, question answering, and dense captioning to situated reasoning. 3D-VisTA also demonstrates superior data efficiency, obtaining strong results even with limited annotations.
+                </span></li>
+            </ol>  
+          <p></p>
+
+        </div>
+      </div>
+    </div>      
+  </div>
+</section>
+
+<section class="section" >
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <h2 class="title is-3"> <img id="painting_icon" width="4%" src="https://img.icons8.com/?size=1x&id=43611&format=png"> ScanScribe Dataset</h2>
+        <div class="content has-text-justified">
+          <p>
+            We collect RGB-D scans of indoor scenes from ScanNet and 3R-Scan.
+            For the scans from ScanNet, we transform the text from existing datasets based on ScanNet into scene descriptions, including the question-answer pairs from ScanQA and the referring expressions from ScanRefer and ReferIt3D. For the scans from 3R- Scan, we adopt both templates and GPT-3  to generate scene descriptions based on their scene graph annotations. Ultimately, 278K scene descriptions are generated for the collected 3D scenes.
+          </p>
+        </div>
+        <img id="painting_icon" width="100%" src="file/language-examples.png">
+      </div>
+    </div>
+</section>
+
+<section class="section" >
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <h2 class="title is-3"> <img id="painting_icon" width="4%" src="https://img.icons8.com/?size=1x&id=oOOSYZyuA844&format=png"> 3D-VisTA Model</h2>
+        <div class="content has-text-justified">
+          <p>
+          </p>
+          3D-VisTA is a simple and unified Transformer for aligning 3D scenes and text. 3D-VisTA takes a pair of scene point cloud and sentence as input. It first encodes the sentence via a text encoding module and processes the point cloud via a scene encoding module. Then the text and 3D object tokens are fused by a multi-modal fusion module to capture the correspondence between 3D objects and text. 3D-VisTA is pre-trained using self-supervised learning and can be easily fine-tuned to various downstream tasks.
+        </div>
+        <img id="painting_icon" width="100%" src="file/model.png">
+      </div>
+    </div>
+</section>
+
+<section class="section" >
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <h2 class="title is-3"> <img id="painting_icon" width="4%" src="https://img.icons8.com/?size=1x&id=sei9JmRv5YVb&format=png"> Examples on 3DVL tasks </h2>
+        <div class="content has-text-justified">
+          <p>
+            Qualitative results on ScanRefer, ScanQA, and SQA3D. In (a,b,c,d,e), green and red denote the ground-truth and predicted object boxes, respectively. The results show that pre-training improves the understanding of spatial relations, visual concepts, and situations.
+          </p>s
+        </div>
+        <img id="painting_icon" width="100%" src="file/qualititive.png">
+      </div>
+    </div>
+</section>
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@inproceedings{3dvista,
+    title={3D-VisTA: Pre-trained Transformer for 3D Vision and Text Alignment},
+    author={Ziyu, Zhu and Xiaojian, Ma and Yixin, Chen and Zhidong, Deng and Siyuan, Huang and Qing, Li},
+    booktitle={ICCV},
+    year={2023}
+}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+    <div class="container">
+        <div class="columns is-centered">
+            <div class="column">
+                <div class="content has-text-centered">
+                    <p>
+                        Website template borrowed from <a href="https://github.com/nerfies/nerfies.github.io">NeRFies</a>.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
